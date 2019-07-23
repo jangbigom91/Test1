@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-/***함수포인터 사칙연산***/
+/*******함수포인터 사칙연산*******/
 void add(double num1, double num2) 
 {
 	double result;
@@ -32,16 +32,10 @@ void sub3(double num1, double num2)
 }
 
 
-
-
-
-
-
-
 int main(void)
 {
 	
-	/*****포인터 변수*****/
+	/*******포인터 변수*******/
 	
 	/*
 	int a = 0, b = 0, c = 0;
@@ -75,7 +69,7 @@ int main(void)
 	return 0;
 	*/
 
-	/*****다차원 포인터 변수*****/
+	/*******다차원 포인터 변수*******/
 
 	/*
 	char c1 = 'A';
@@ -157,7 +151,7 @@ int main(void)
 	return 0;
 	*/
 
-	/*****주소의 가감산*****/
+	/*******주소의 가감산*******/
 
 	/*
 	char c = 'A';
@@ -211,10 +205,9 @@ int main(void)
 	return 0;
 	*/
 	
+	/*******함수 포인터 -- 함수의 시작 주소를 저장하는 변수*******/
 
-	/*****함수 포인터 -- 함수의 시작 주소를 저장하는 변수*****/
-
-	
+	/*
 	double x = 3.1, y = 5.1;
 	void(*pointer)(double, double);
 
@@ -236,13 +229,34 @@ int main(void)
 	
 	
 	return 0;
+	*/
 	
+	/*******포인터와 1차원 배열*******/
 
+	/*
+	int array[3] = { 10,20,30 };
+
+	printf("%x %x %x\n", array, array + 0, &array[0]);
+	printf("   %x %x\n",        array + 1, &array[1]);
+	printf("   %x %x\n",        array + 2, &array[2]);
+	printf("%d %d %d\n",sizeof(array),sizeof(array+0),sizeof(&array[0]));
+	
+	return 0;
+	*/
 
 	
+	/*
+	int array[3] = { 10,20,30 };	
+	int* p = NULL;
 
+	p = array;
 
+	printf("%x %x %x\n", p, p + 0, &p[0]);
+	printf("%x %x\n",       p + 1, &p[1]);
+	printf("%x %x\n",       p + 2, &p[2]);
 
+	return 0;
+	*/
 
 
 
