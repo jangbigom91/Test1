@@ -3,10 +3,10 @@
 
 
 
-/*****포안터 배열*****/
 
 void output(char *p, int arraysize)
 {
+	/*
 	int i = 0;
 
 	for (i = 0; i < arraysize; i++)
@@ -16,10 +16,13 @@ void output(char *p, int arraysize)
 		}
 		printf("%c", p[i]);
 	}
+	*/
 }
 
 int main(void)
 {
+	/*****포안터 배열*****/
+	
 	/*
 	int a = 10, b = 20, c = 30;
 	int* ap[3]; ///포인터 배열///
@@ -55,7 +58,7 @@ int main(void)
 	return 0;
 	*/
 	
-	/**/
+	/*
 	int i = 0;
 	char array1[20] = {NULL};
 	char* p = NULL;
@@ -90,7 +93,8 @@ int main(void)
 
 	for (i = 0; i < sizeof(array1); i++)
 	{
-		if (p[i] == '\n') {
+		if (p[i] == '\n') 
+		{
 			break;
 		}
 		printf("%c", p[i]);
@@ -100,8 +104,37 @@ int main(void)
 
 	int size = sizeof(array1);
 	output(array1, size);
+	*/
 
+	//** 배열에 문자열 대입, 0번 index부터 하나씩 들어감 **//
+	
+	/*
+	char array[] = "ABCD";
+	char* p1 = NULL;
 
+	printf("%c %c %c %c %c\n", array[0], array[1], array[2], array[3], array[4]);
+	printf("%d %d %d %d %d\n", array[0], array[1], array[2], array[3], array[4]);
+	printf("%s \n", array);
+	
+	printf("%d\n", sizeof(array));
 
-
+	printf("\n-----\n");
+	
+	p1 = array;
+	printf("%c %c %c %c %c\n", p1[0], p1[1], p1[2], p1[3], p1[4]);
+	printf("%d %d %d %d %d\n", p1[0], p1[1], p1[2], p1[3], p1[4]);
+	printf("%s \n", p1);
+	
+	printf("\n-----\n");
+	
+	// const : 상수를 선언할 때 사용하는 키워드 //
+	//ABCD라는 문자열 자체는 리터럴로써 상수이기 때문에 char 포인터에 바로 대입할 수 없으므로 const 키워드를 사용하여 상수포인터 선언//
+	
+	const char* p2 = "ABCD";
+	printf("%c %c %c %c %c\n", p2[0], p2[1], p2[2], p2[3], p2[4]);
+	printf("%d %d %d %d %d\n", p2[0], p2[1], p2[2], p2[3], p2[4]);
+	printf("%s \n", p2);
+	
+	return 0;
+	*/
 }
